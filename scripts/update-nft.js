@@ -3,7 +3,7 @@ const { ethers, upgrades } = require("hardhat");
 
 async function main() {
   const NftV2 = await ethers.getContractFactory("Cuki");
-  const proxy = await upgrades.upgradeProxy("0xe41e4Cbb9882Ac9e36950d5f960609ce8bBC1b7f", NftV2);
+  const proxy = await upgrades.upgradeProxy("0xC1a7762BC548c0297b8E37308957d453b9c28243", NftV2);
   console.log("Dapp upgraded to:", proxy.address);
 }
 
